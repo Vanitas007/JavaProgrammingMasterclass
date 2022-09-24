@@ -1,6 +1,6 @@
 package s3_FirstSteps;
 
-public class a29_FloatAndDouble {
+public class a029_FloatAndDouble {
 
     public static void main(String[] args) {
 

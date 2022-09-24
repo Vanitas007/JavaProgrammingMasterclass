@@ -1,6 +1,6 @@
 package s3_FirstSteps;
 
-public class a31_CharAndBolean {
+public class a031_CharAndBolean {
     public static void main(String[] args) {
 
         char myChar = 'D';

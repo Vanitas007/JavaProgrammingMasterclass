@@ -1,6 +1,6 @@
 package s3_FirstSteps;
 
-public class a20_HelloWorld {
+public class a020_HelloWorld {
 
     public static void main(String[] args) {
 

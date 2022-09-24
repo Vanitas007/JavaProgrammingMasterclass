@@ -1,6 +1,6 @@
 package s3_FirstSteps;
 
-public class a25_PrimitiveTypes {
+public class a025_PrimitiveTypes {
     public static void main(String[] args) {
 
         int myValue = 10000;
