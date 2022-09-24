@@ -1,6 +1,6 @@
 package s3_FirstSteps;
 
-public class a32_String {
+public class a032_String {
     public static void main(String[] args) {
 
         String myString = "This is a string";

@@ -1,6 +1,6 @@
 package s3_FirstSteps;
 
-public class a33_Operators {
+public class a033_Operators {
     public static void main(String[] args) {
 
         int result = 1 + 2;
