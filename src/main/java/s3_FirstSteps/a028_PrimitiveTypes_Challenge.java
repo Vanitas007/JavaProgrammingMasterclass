@@ -1,6 +1,6 @@
 package s3_FirstSteps;
 
-public class a028_Challenge_PrimitiveTypes {
+public class a028_PrimitiveTypes_Challenge {
     public static void main(String[] args) {
 
         byte myByte = Byte.MAX_VALUE - 1;
