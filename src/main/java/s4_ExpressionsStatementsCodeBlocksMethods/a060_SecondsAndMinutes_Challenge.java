@@ -30,7 +30,7 @@ public class a060_SecondsAndMinutes_Challenge {
 
         return decForm.format(hours) + "h " + decForm.format(remainingMinutes) + "m " + decForm.format(seconds) + "s";
     }
-    
+
     public static String getDurationString(int seconds) {
         if (seconds < 0) {
             return INVALID_VALUE_MESSAGE;
