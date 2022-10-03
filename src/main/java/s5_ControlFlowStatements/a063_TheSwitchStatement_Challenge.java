@@ -1,6 +1,6 @@
 package s5_ControlFlowStatements;
 
-public class a063_TheSwitchStatement {
+public class a063_TheSwitchStatement_Challenge {
 
     public static void main(String[] args) {
 
