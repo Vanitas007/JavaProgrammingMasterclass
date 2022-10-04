@@ -3,10 +3,9 @@ package s5_ControlFlowStatements.Exercise;
 public class e012_NumberInWord {
     public static void main(String[] args) {
 
-        printNumberInWord(0);
+        printNumberInWord(6);
     }
 
-//  IF
     public static void printNumberInWord(int number) {
 
         String[] wholeNumber = {"ZERO", "ONE", "TWO", "THREE", "FOUR", "FIVE", "SIX", "SEVEN", "EIGHT", "NINE"};
@@ -18,7 +17,6 @@ public class e012_NumberInWord {
     }
 }
 
-//  switch
 //    public static void printNumberInWord(int number) {
 //
 //        switch (number){
