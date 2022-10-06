@@ -17,7 +17,7 @@ public class a065_For_Challenge {
         }
         System.out.println(isPrime(15));
 
-        // Create a for statement using any range of numbers
+// Create a for statement using any range of numbers
 // Determine if the number is a prime number using the isPrime method
 // if it is a prime number, print it out AND increment a count of the
 // number of prime numbers found
