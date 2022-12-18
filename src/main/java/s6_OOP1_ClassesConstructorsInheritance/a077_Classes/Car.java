@@ -27,7 +27,7 @@ public class Car {
     private int doors = 2;
     private boolean convertible = true;
 
-    public String getMake(){
+    public String getMake() {
         return make;
     }
 
@@ -45,6 +45,33 @@ public class Car {
 
     public boolean isConvertible() {
         return convertible;
+    }
+
+    public void setMake(String make) {
+        if (make == null) make = "Unknown";
+        String lowercaseMake = make.toLowerCase();
+        switch (lowercaseMake) {
+            case "holden", "porsche", "tesla" -> this.make = make;
+            default -> {
+                this.make = "Unsupported";
+            }
+        }
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public void setColour(String colour) {
+        this.colour = colour;
+    }
+
+    public void setDoors(int doors) {
+        this.doors = doors;
+    }
+
+    public void setConvertible(boolean convertible) {
+        this.convertible = convertible;
     }
 
     public void describeCar() {
