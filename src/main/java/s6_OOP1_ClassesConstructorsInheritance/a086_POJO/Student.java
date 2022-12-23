@@ -4,13 +4,13 @@ public class Student {
     private String id;
     private String name;
     private String dateOfBirth;
-    private String lassList;
+    private String classList;
 
-    public Student(String id, String name, String dateOfBirth, String lassList) {
+    public Student(String id, String name, String dateOfBirth, String classList) {
         this.id = id;
         this.name = name;
         this.dateOfBirth = dateOfBirth;
-        this.lassList = lassList;
+        this.classList = classList;
     }
 
     @Override
@@ -19,7 +19,7 @@ public class Student {
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", dateOfBirth='" + dateOfBirth + '\'' +
-                ", lassList='" + lassList + '\'' +
+                ", lassList='" + classList + '\'' +
                 '}';
     }
 
@@ -35,8 +35,8 @@ public class Student {
         return dateOfBirth;
     }
 
-    public String getLassList() {
-        return lassList;
+    public String getClassList() {
+        return classList;
     }
 
     public void setId(String id) {
@@ -51,7 +51,7 @@ public class Student {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public void setLassList(String lassList) {
-        this.lassList = lassList;
+    public void setClassList(String lassList) {
+        this.classList = lassList;
     }
 }
