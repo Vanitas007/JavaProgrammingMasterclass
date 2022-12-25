@@ -35,13 +35,26 @@ public class Main {
 //        System.out.println("height= " + wall.getHeight());
 //        System.out.println("area= " + wall.getArea());
 
-//        e033
-        e033_Point first = new e033_Point(6, 5);
-        e033_Point second = new e033_Point(3, 1);
-        System.out.println("distance(0,0)= " + first.distance(second));
-        System.out.println("distance(second)= " + first.distance(second));
-        System.out.println("distance(2,2)= " + first.distance(2, 2));
-        e033_Point point = new e033_Point();
-        System.out.println("distance()= " + point.distance(second));
+////        e033
+//        e033_Point first = new e033_Point(6, 5);
+//        e033_Point second = new e033_Point(3, 1);
+//        System.out.println("distance(0,0)= " + first.distance(second));
+//        System.out.println("distance(second)= " + first.distance(second));
+//        System.out.println("distance(2,2)= " + first.distance(2, 2));
+//        e033_Point point = new e033_Point();
+//        System.out.println("distance()= " + point.distance(second));
+
+//      e035
+        e035_ComplexOperations one = new e035_ComplexOperations(1.0, 1.0);
+        e035_ComplexOperations number = new e035_ComplexOperations(2.5, -1.5);
+        one.add(1, 1);
+        System.out.println("one.real= " + one.getReal());
+        System.out.println("one.imaginary= " + one.getImaginary());
+        one.subtract(number);
+        System.out.println("one.real= " + one.getReal());
+        System.out.println("one.imaginary= " + one.getImaginary());
+        number.subtract(one);
+        System.out.println("number.real= " + number.getReal());
+        System.out.println("number.imaginary= " + number.getImaginary());
     }
 }
