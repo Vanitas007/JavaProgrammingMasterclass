@@ -1,7 +1,7 @@
 package s6_OOP1_ClassesConstructorsInheritance.a088_Inheritance;
 
 public class Animal {
-    private String type;
+    protected String type;
     private String size;
     private double weight;
 
