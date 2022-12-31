@@ -1,6 +1,6 @@
 package s9_OOP2_Polymorphism.a101_Composition;
 
-public class PersonalComputer extends Product{
+public class PersonalComputer extends Product {
 
     private ComputerCase computerCase;
     private Monitor monitor;
@@ -13,15 +13,25 @@ public class PersonalComputer extends Product{
         this.motherboard = motherboard;
     }
 
-    public ComputerCase getComputerCase() {
-        return computerCase;
+    private void drawLogo() {
+        monitor.drawPixelAt(1200, 50, "yellow");
+    }
+    public void powerUp(){
+        computerCase.pressPowerButton();
+        drawLogo();
     }
 
-    public Monitor getMonitor() {
-        return monitor;
-    }
 
-    public Motherboard getMotherboard() {
-        return motherboard;
-    }
+
+//    public ComputerCase getComputerCase() {
+//        return computerCase;
+//    }
+//
+//    public Monitor getMonitor() {
+//        return monitor;
+//    }
+//
+//    public Motherboard getMotherboard() {
+//        return motherboard;
+//    }
 }
