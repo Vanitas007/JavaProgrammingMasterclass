@@ -7,7 +7,7 @@ public class Item {
     private double price;
     private String size = "MEDIUM";
 
-    public Item(String name, String type, double price) {
+    public Item(String type, String name, double price) {
         this.name = name.toUpperCase();
         this.type = type.toUpperCase();
         this.price = price;
