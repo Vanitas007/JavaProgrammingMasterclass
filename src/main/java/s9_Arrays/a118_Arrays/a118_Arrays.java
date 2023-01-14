@@ -2,7 +2,7 @@ package s9_Arrays.a118_Arrays;
 
 import java.util.Arrays;
 
-public class Main {
+public class a118_Arrays {
     public static void main(String[] args) {
 
         int[] myIntArray = new int[10];
