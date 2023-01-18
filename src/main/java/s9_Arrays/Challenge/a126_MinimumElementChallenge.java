@@ -11,6 +11,12 @@ public class a126_MinimumElementChallenge {
 
         int returnedMin = findMin(returnedArray);
         System.out.println("min = " + returnedMin);
+
+        int[] descArray = reverseArray(returnedArray);
+        System.out.println(Arrays.toString(descArray));
+
+        reverseArrayKURS(returnedArray);
+        System.out.println("Final" + Arrays.toString(returnedArray));
     }
 
     /**
@@ -56,4 +62,31 @@ public class a126_MinimumElementChallenge {
         }
         return min;
     }
+
+    /**
+     * moja wersja
+     */
+    private static int[] reverseArray(int[] array) {
+        Arrays.sort(array);
+//        int[] descArray = Arrays.copyOf(array, array.length);
+        int[] descArray = array.clone();
+
+        for (int i = 0; i < array.length; i++) {
+            array[i] = descArray[array.length - 1 - i];
+        }
+        return array;
+    }
+    private static void reverseArrayKURS(int[] array) {
+        int maxIndex = array.length - 1;
+        int halfLenght = array.length / 2;
+
+        for (int i = 0; i < halfLenght; i++) {
+            int temp = array[i];
+            array[i] = array[maxIndex - i];
+            array[maxIndex - i] = temp;
+        }
+    }
+
 }
+
+//5,6,4,7,3,8,2,9,1
