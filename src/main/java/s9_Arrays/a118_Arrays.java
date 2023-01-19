@@ -1,4 +1,4 @@
-package s9_Arrays.a118_Arrays;
+package s9_Arrays;
 
 import java.util.Arrays;
 
