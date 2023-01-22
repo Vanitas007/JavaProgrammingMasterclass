@@ -11,7 +11,7 @@ public class a137_LinkedList {
 
         placesToVisit.add("Sydney");
         placesToVisit.add(0, "Canberra");
-        System.out.println(placesToVisit);
+//        System.out.println(placesToVisit);
 
         addMoreElements(placesToVisit);
         System.out.println(placesToVisit);
@@ -20,7 +20,7 @@ public class a137_LinkedList {
 //        System.out.println(placesToVisit);
 
 //                gettingElements(placesToVisit);
-//        printItinearary3(placesToVisit);
+//        printItinearary(placesToVisit);
 
         testIterator(placesToVisit);
 
