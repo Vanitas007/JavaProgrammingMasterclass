@@ -1,7 +1,7 @@
 package s10_ListArrayListLinkedListIteratorAutoboxing.Challenge;
 
-
 import java.util.LinkedList;
+import java.util.Scanner;
 
 record Place(String name, int distance) {
     @Override
@@ -11,9 +11,6 @@ record Place(String name, int distance) {
 }
 
 public class a140_LinkedList_Challenge {
-
-//    private static final Scanner scanner = new Scanner(System.in);
-
     public static void main(String[] args) {
 
         LinkedList<Place> placesToVisit = new LinkedList<>();
@@ -29,20 +26,55 @@ public class a140_LinkedList_Challenge {
 
         placesToVisit.addFirst(new Place("Sydney", 0));
         System.out.println(placesToVisit);
-//
-//        placesToVisit.sort(Comparator.comparingInt(Place::distance));
 
-//        boolean flag = true;
-//        while (flag) {
-//            printActions();
-//            switch (scanner.nextLine()) {
-//                case "F", "Forward" -> forward(placesToVisit);
-//                case "B", "Backward" -> System.out.println("b");
-//                case "L", "List Places" -> System.out.println("L");
-//                case "M", "Menu" -> System.out.println("M");
-//                default -> flag = false;
-//            }
-//        }
+        var iterator = placesToVisit.listIterator();
+        Scanner scanner = new Scanner(System.in);
+        boolean quitLoop = false;
+        boolean forward = true;
+
+        printMenu();
+
+        while (!quitLoop) {
+            if (!iterator.hasPrevious()) {
+                System.out.println("Originating: " + iterator.next());
+                forward = true;
+            }
+            if (!iterator.hasNext()) {
+                System.out.println("Originating: " + iterator.previous());
+                forward = false;
+            }
+            System.out.println("Enter value: ");
+            String menuItem = scanner.nextLine().toUpperCase().substring(0, 1);
+            switch (menuItem) {
+                case "F" -> {
+                    System.out.println("User wants to go forward");
+                    if (!forward) {             //Reversing Direction
+                        forward = true;
+                        if (iterator.hasNext()) {
+                            iterator.next();    //Adjust position forward
+                        }
+                    }
+                    if (iterator.hasNext()) {
+                        System.out.println(iterator.next());
+                    }
+                }
+                case "B" -> {
+                    System.out.println("User wants to go backwards");
+                    if (forward) {             //Reversing Direction
+                        forward = false;
+                        if (iterator.hasPrevious()) {
+                            iterator.previous();    //Adjust position backwards
+                        }
+                    }
+                    if (iterator.hasPrevious()) {
+                        System.out.println(iterator.previous());
+                    }
+                }
+                case "M" -> printMenu();
+                case "L" -> System.out.println(placesToVisit);
+                default -> quitLoop = true;
+            }
+        }
     }
 
     private static void addPlace(LinkedList<Place> list, Place place) {
@@ -66,34 +98,17 @@ public class a140_LinkedList_Challenge {
         }
         list.add(place);
 
-//        list.add(new Place("Sydney", 0));
-//        list.add(new Place("Adelaide", 1374));
-//        list.add(new Place("Alice Springs", 2771));
-//        list.add(new Place("Brisbane", 917));
-//        list.add(new Place("Darwin", 3971));
-//        list.add(new Place("Melbourne", 877));
-//        list.add(new Place("Perth", 3923));
     }
 
-//    private static void forward(LinkedList<Place> list) {
-//        System.out.println("Trip starts at " + list.getFirst());
-//        for (int i = 1; i < list.size(); i++) {
-//
-////            System.out.println("--> From: " + list.get(i - 1) + " to " + list.get(i));
-//        }
-//        System.out.println("Trip ends at " + list.getLast());
-//    }
-//
-//
-//    private static void printActions() {
-//        String textBlock = """
-//                Available actions (select word or letter):
-//
-//                (F)orward
-//                (B)ackward
-//                (L)ist Places
-//                (M)enu
-//                (Q)uit""";
-//        System.out.println(textBlock);
-//    }
+    private static void printMenu() {
+        String textBlock = """
+                Available actions (select word or letter):
+
+                (F)orward
+                (B)ackward
+                (L)ist Places
+                (M)enu
+                (Q)uit""";
+        System.out.println(textBlock);
+    }
 }
