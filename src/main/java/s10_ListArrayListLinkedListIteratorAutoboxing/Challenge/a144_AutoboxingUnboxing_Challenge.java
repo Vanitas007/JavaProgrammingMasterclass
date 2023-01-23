@@ -12,9 +12,20 @@ record Customer(String name, ArrayList<Double> transactions) {
 public class a144_AutoboxingUnboxing_Challenge {
     public static void main(String[] args) {
 
-        Customer bob = new Customer("Bob", 1000);
+        Customer bob = new Customer("Bob S", 1000);
         System.out.println(bob);
 
+        Bank bank = new Bank("Chase");
+        bank.addNewCustomer("Jane A", 500);
+        System.out.println(bank);
+
+        bank.addTransaction("Jane A", -10.45);
+        bank.addTransaction("JANe A", -43.98);
+        bank.printStatement("Jane a");
+
+        bank.addNewCustomer("bob s", 25);
+        bank.addTransaction("BOB S", 100);
+        bank.printStatement("BOB s");
     }
 }
 
@@ -25,6 +36,14 @@ class Bank {
 
     public Bank(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Bank{" +
+                "name='" + name + '\'' +
+                ", customers=" + customers +
+                '}';
     }
 
     private Customer getCustomer(String customerName) {
@@ -39,10 +58,32 @@ class Bank {
 
     public void addNewCustomer(String customerName, double initialDeposit) {
 
-        if ((getCustomer(customerName))==null){
+        if ((getCustomer(customerName)) == null) {
             Customer customer = new Customer(customerName, initialDeposit);
             customers.add(customer);
-            System.out.println("New customer added: "+customerName);
+            System.out.println("New customer added: " + customerName);
+        }
+    }
+
+    public void addTransaction(String name, double transactionAmount) {
+
+        Customer customer = getCustomer(name);
+        if (customer != null) {
+            customer.transactions().add(transactionAmount);
+        }
+    }
+
+
+    public void printStatement(String customerName) {
+        Customer customer = getCustomer(customerName);
+        if (customer == null) {
+            return;
+        }
+        System.out.println("-".repeat(30));
+        System.out.println("CustomerName: " + customer.name());
+        System.out.println("Transaction:");
+        for (double d : customer.transactions()) {
+            System.out.printf("$%10.2f (%s)%n", d, d < 0 ? "debit" : "credit");
         }
     }
 }
