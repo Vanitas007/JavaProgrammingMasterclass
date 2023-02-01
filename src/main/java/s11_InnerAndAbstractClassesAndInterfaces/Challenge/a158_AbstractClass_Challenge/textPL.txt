@@ -1,0 +1,58 @@
+W ramach tego wyzwania utwórz klasę abstrakcyjną, aby zdefiniować elementy, które mogą być przechowywane na liście.
+Klasa powinna zawierać 2 odniesienia do pozycji, które będą reprezentować następną i poprzednią
+pozycji (w przypadku listy połączonej).
+To znaczy, jeśli wywołasz swoją klasę abstrakcyjną ListItem, będzie ona miała 2 zmienne składowe
+wpisz ListItem, który będzie zawierał odniesienia do następnego/prawego i poprzedniego/lewego elementu ListItem.
+
+Klasa abstrakcyjna będzie również musiała zawierać wartość - staraj się być jak najbardziej elastyczna
+przy definiowaniu typu tej wartości.
+
+Klasa będzie również potrzebowała metod, aby przejść do następnego elementu i wrócić do poprzedniego elementu,
+oraz metody ustawiania następnego i poprzedniego elementu.
+
+Należy również określić metodę CompareTo(), która przyjmuje parametr tego samego typu co metoda
+class i zwraca 0, jeśli wartości są równe, większe niż zero, jeśli wartość sortowana jest większa niż
+parametr i mniej niż zero, jeśli sortuje mniej niż parametr.
+
+Utwórz konkretną klasę z klasy elementu listy abstrakcyjnej i użyj jej w LinkedList
+class, aby zaimplementować połączoną listę, która doda elementy w kolejności (tak, aby były posortowane
+alfabetycznie). Zduplikowane wartości nie są dodawane.
+
+Zauważ, że tworzysz tutaj własną klasę LinkedList, nie używając wbudowanej klasy Java.
+
+Zasady dodawania pozycji do połączonej listy to:
+Jeśli nagłówek listy jest pusty, spraw, aby nagłówek odnosił się do elementu, który ma zostać dodany.
+Jeśli pozycja do dodania jest mniejsza niż pozycja bieżąca na liście, dodaj pozycję przed
+bieżący element (tj. spraw, aby „następny” poprzedniego elementu odnosił się do nowego elementu, a nowy element
+„następny” odnosi się do bieżącego elementu).
+Jeśli element do dodania jest większy niż bieżący element, przejdź do następnego elementu i porównaj
+ponownie (jeśli nie ma następnego elementu, to tam należy nowy element).
+
+Należy zachować ostrożność podczas wstawiania przed pierwszym elementem na liście (ponieważ nie będzie on miał poprzedniego
+przedmiot).
+
+Będziesz także potrzebować metody usuwania elementu z listy.
+
+Wskazówka: jeśli tworzysz klasy o nazwach takich jak List, LinkedList, Node itp., upewnij się, że
+tworzysz swoje klasy przed odwołaniem się do nich. W poprzednich filmach, o których często mówiliśmy
+klasy, które utworzymy później, ale jeśli użyjesz nazw, które IntelliJ rozpoznaje jako klasy Java (np
+jako LinkedList), utworzy dla nich import i prawdopodobnie spowoduje problemy później.
+
+Opcjonalnie: utwórz klasę, aby użyć konkretnej klasy do zaimplementowania drzewa wyszukiwania binarnego:
+Podczas dodawania elementów do drzewa wyszukiwania binarnego, jeśli element do dodania jest mniejszy niż bieżący element
+następnie przesuń w lewo, jeśli jest większy niż bieżący element, przesuń w prawo.
+
+Nowy element jest dodawany, gdy próba poruszania się w wymaganym kierunku wiązałaby się z podążaniem za
+zerowe odniesienie.
+Powtarzam, duplikaty są niedozwolone.
+
+Wskazówka: aby uniknąć wpisywania wielu wierszy typu „addItem”, podziel ciąg na tablicę i utwórz listę w
+pętla jak w poniższym przykładzie.
+
+Utwórz tablicę danych łańcuchowych, aby uniknąć wpisywania wielu instrukcji addItem:
+
+        String stringData = "Darwin Brisbane Perth Melbourne Canberra Adelaide Sydney Canberra";
+
+        String[] data = stringData.split(" ");
+        for (String s : data) {
+              create new item with value set to the string s
