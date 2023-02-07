@@ -18,4 +18,13 @@ public class Main {
         tracked.track();
         flier.land();
     }
+
+    private static void inFlight(FlightEnabled flier){
+        flier.takeOff();
+        flier.fly();
+        if (flier instanceof Trackable tracked){
+            tracked.track();
+        }
+        flier.land();
+    }
 }
