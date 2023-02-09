@@ -1,6 +1,5 @@
 package s11_New_Abstraction.a155_Interfaces;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -32,7 +31,7 @@ public class Main {
         System.out.printf("The truck traveled %.2f km or %.2f miles%n",
                 kmsTraveled, milesTraveled);
 
-        LinkedList<FlightEnabled> fliers = new ArrayList<>();
+        LinkedList<FlightEnabled> fliers = new LinkedList<>();
         fliers.add(bird);
 
         List<FlightEnabled> betterFliers = new LinkedList<>();
