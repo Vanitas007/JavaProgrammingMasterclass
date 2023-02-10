@@ -60,6 +60,7 @@ public class Main {
             flier.takeOff();
         }
     }
+
     private static void flyFliers(List<FlightEnabled> fliers) {
         for (var flier : fliers) {
             flier.fly();
