@@ -10,7 +10,7 @@ public class a128_TwoDimensionalArrays {
         System.out.println("array2.lenght = " + array2.length);
 
         for (int[] outer : array2) {
-            System.out.println(Arrays.toString(outer));
+            System.out.println("linia-13 "+Arrays.toString(outer));
         }
 
 //        for (int i=0;i<array2.length;i++){
